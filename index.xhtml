@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>JSF + PrimeFaces + SQL to Ford</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:dataTable var="s" value="#{main.list}">
+                <f:facet name ="header">
+                    Autos Ford
+                </f:facet>
+                <p:column headerText="Id">
+                    <h:outputText value="#{s.id}" />
+                </p:column>
+
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{s.nombre}" />
+                </p:column>
+
+                <p:column headerText="Color">
+                    <h:outputText value="#{s.color}" />
+                </p:column>
+
+                <p:column headerText="Año">
+                    <h:outputText value="#{s.año}" />
+                </p:column>
+
+                <p:column headerText="Stock">
+                    <h:outputText value="#{s.stock}" />
+                </p:column>
+            </p:dataTable>         
+        </h:form>
+
+    </h:body>
+</html>
